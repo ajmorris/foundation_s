@@ -95,6 +95,7 @@ add_action( 'widgets_init', 'foundation_s_widgets_init' );
  * Enqueue scripts and styles
  */
 function foundation_s_scripts() {
+	wp_register_style( 'foundation', get_stylesheet_directory() . 'stylesheets/app.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
