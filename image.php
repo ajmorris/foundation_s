@@ -9,8 +9,8 @@
 get_header();
 ?>
 
-		<div id="primary" class="content-area image-attachment">
-			<div id="content" class="site-content" role="main">
+		<div id="primary" class="content-area row image-attachment">
+			<div id="content" class="site-content eight columns" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 

@@ -10,8 +10,8 @@
 
 get_header(); ?>
 
-		<section id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
+		<section id="primary" class="content-area row">
+			<div id="content" class="site-content eight columns" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -91,7 +91,8 @@ get_header(); ?>
 			<?php endif; ?>
 
 			</div><!-- #content .site-content -->
+			<div class="four columns">
+				<?php get_sidebar(); ?>				
+			</div>
 		</section><!-- #primary .content-area -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

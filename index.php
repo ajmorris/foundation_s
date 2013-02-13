@@ -15,7 +15,7 @@
 get_header(); ?>
 
 		<div id="primary" class="content-area row">
-			<div id="content" class="site-content" role="main six columns offset-by-six">
+			<div id="content" class="site-content eight columns" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -43,7 +43,11 @@ get_header(); ?>
 			<?php endif; ?>
 
 			</div><!-- #content .site-content -->
+
+			<div class="four columns">
+				<?php get_sidebar(); ?>				
+			</div>
 		</div><!-- #primary .content-area -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
