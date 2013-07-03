@@ -36,7 +36,21 @@
 				<h1 class="assistive-text"><?php _e( 'Menu', 'foundation_s' ); ?></h1>
 				<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'foundation_s' ); ?>"><?php _e( 'Skip to content', 'foundation_s' ); ?></a></div>
 
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				<?php $defaults = array(
+						'theme_location'  => 'primary',
+						'container'       => 'nav',
+						'container_class' => 'site-navigation main-navigation',
+						'menu_class'      => 'nav-bar',
+						'echo'            => true,
+						'fallback_cb'     => 'wp_page_menu',
+						'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						'depth'           => 0,
+						'walker'          => ''
+					);
+
+					wp_nav_menu( $defaults ); 
+
+					?>
 			</nav><!-- .site-navigation .main-navigation -->
 		</header><!-- #masthead .site-header -->
 	</div><!-- .row -->
